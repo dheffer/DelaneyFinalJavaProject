@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(path="/api/v1")
 public class MainController {
@@ -79,10 +80,10 @@ public class MainController {
         return authorRepository.findAll();
     }
 
-    @GetMapping(path = AUTHORS+"/{author_id}")
+    @GetMapping(path = AUTHORS+"/{authorId}")
     public @ResponseBody
-    Optional<Author> getAuthorWithId(@PathVariable Integer author_id){
-        return authorRepository.findById(author_id);
+    Optional<Author> getAuthorWithId(@PathVariable Integer authorId){
+        return authorRepository.findById(authorId);
     }
 
     @PostMapping(path = AUTHORS+"/add")
