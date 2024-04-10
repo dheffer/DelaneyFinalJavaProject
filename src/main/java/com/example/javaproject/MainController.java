@@ -68,7 +68,7 @@ public class MainController {
     String deleteBook(@RequestParam String isbn){
         Book book = bookRepository.findBookByIsbn(isbn);
         if(book != null){
-            bookRepository.deleteById(Integer.valueOf(isbn));
+            bookRepository.delete(book);
             return "Deleted";
         }
         return "Book not found";

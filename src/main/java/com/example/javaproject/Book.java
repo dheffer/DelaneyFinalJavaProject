@@ -9,7 +9,7 @@ public class Book {
     private String isbn;
     private String title;
 
-    private int editionNumber;
+    private int edition_number;
     private String copyright;
     @ManyToMany
     @JoinTable(
@@ -28,8 +28,8 @@ public class Book {
         this.title = title;
     }
 
-    public void setEditionNumber(int editionNumber) {
-        this.editionNumber = editionNumber;
+    public void setEditionNumber(int edition_number) {
+        this.edition_number = edition_number;
     }
 
     public void setCopyright(String copyright) {
@@ -49,7 +49,7 @@ public class Book {
     }
 
     public int getEditionNumber() {
-        return editionNumber;
+        return edition_number;
     }
 
     public String getCopyright() {
